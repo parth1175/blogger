@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+  .atitle{
+    color: yellow;
+    background-color: black;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>All Articles</h1>
+
+  <ul id = "articles">
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to(article.title, article_path(article.id), class: "atitle")%>
+      </li>
+    <%end%>
+  </ul>
+
+  <%= link_to("Create a New Article", new_article_path) %>
+
+</body>
+
+</html>

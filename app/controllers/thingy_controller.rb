@@ -1,0 +1,2 @@
+class ThingyController < ApplicationController
+end
